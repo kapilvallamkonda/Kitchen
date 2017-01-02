@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tablewView: UITableView!
+    var ref: FIRDatabaseReference!
     var sections: [GroceryItem] = []
     var selectedItem: GroceryItem? = nil
     override func viewDidLoad() {
@@ -18,6 +20,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.sections = GroceryDataStore().getKitchenList()
         self.tablewView.separatorStyle = UITableViewCellSeparatorStyle.none
         // Do any additional setup after loading the view, typically from a nib.
+
+        ref = FIRDatabase.database().reference()
+        if let userID = FIRAuth.auth()?.currentUser?.uid {
+        
+        ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+//            let value = snapshot.value as? NSDictionary
+//            let username = value?["username"] as? String ?? ""
+//            let user = User.init(username: username)
+//            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        }
     }
 
     override func didReceiveMemoryWarning() {

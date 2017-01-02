@@ -19,6 +19,8 @@
 		049A02FA1E0F92D600AC9EC7 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A02F91E0F92D600AC9EC7 /* GroceryItem.swift */; };
 		049A02FC1E0F9B5C00AC9EC7 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A02FB1E0F9B5C00AC9EC7 /* AddNewViewController.swift */; };
 		049A02FE1E139ED400AC9EC7 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A02FD1E139ED400AC9EC7 /* UpdateViewController.swift */; };
+		04B33C391E17B036001D44AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B33C381E17B036001D44AB /* GoogleService-Info.plist */; };
+		0F37B815FFA447DD78673BBE /* libPods-Groceries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10655FA820B89D3ED902087B /* libPods-Groceries.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		049A02F91E0F92D600AC9EC7 /* GroceryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		049A02FB1E0F9B5C00AC9EC7 /* AddNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
 		049A02FD1E139ED400AC9EC7 /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		04B33C381E17B036001D44AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10655FA820B89D3ED902087B /* libPods-Groceries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Groceries.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D17374462C588C22BE5A258 /* Pods-Groceries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groceries.release.xcconfig"; path = "Pods/Target Support Files/Pods-Groceries/Pods-Groceries.release.xcconfig"; sourceTree = "<group>"; };
+		964E8918FD40E5C8EA9F1F19 /* Pods-Groceries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groceries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Groceries/Pods-Groceries.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F37B815FFA447DD78673BBE /* libPods-Groceries.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +98,8 @@
 				049A02D81E0F83FB00AC9EC7 /* GroceriesTests */,
 				049A02E31E0F83FB00AC9EC7 /* GroceriesUITests */,
 				049A02C21E0F83FB00AC9EC7 /* Products */,
+				A0093D18EFD3FC78F8849ACC /* Pods */,
+				F71DC7CFCD32CC4FDA0404B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +124,7 @@
 				049A02CB1E0F83FB00AC9EC7 /* Assets.xcassets */,
 				049A02CD1E0F83FB00AC9EC7 /* LaunchScreen.storyboard */,
 				049A02D01E0F83FB00AC9EC7 /* Info.plist */,
+				04B33C381E17B036001D44AB /* GoogleService-Info.plist */,
 			);
 			path = Groceries;
 			sourceTree = "<group>";
@@ -164,6 +174,23 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		A0093D18EFD3FC78F8849ACC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				964E8918FD40E5C8EA9F1F19 /* Pods-Groceries.debug.xcconfig */,
+				1D17374462C588C22BE5A258 /* Pods-Groceries.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F71DC7CFCD32CC4FDA0404B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10655FA820B89D3ED902087B /* libPods-Groceries.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049A02E91E0F83FB00AC9EC7 /* Build configuration list for PBXNativeTarget "Groceries" */;
 			buildPhases = (
+				3E6BAEDE32804F1B63D06E85 /* [CP] Check Pods Manifest.lock */,
 				049A02BD1E0F83FB00AC9EC7 /* Sources */,
 				049A02BE1E0F83FB00AC9EC7 /* Frameworks */,
 				049A02BF1E0F83FB00AC9EC7 /* Resources */,
+				80E4C93E5B96E894767207CC /* [CP] Embed Pods Frameworks */,
+				EB2570676C37F2E7D7936F19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049A02CF1E0F83FB00AC9EC7 /* LaunchScreen.storyboard in Resources */,
+				04B33C391E17B036001D44AB /* GoogleService-Info.plist in Resources */,
 				049A02CC1E0F83FB00AC9EC7 /* Assets.xcassets in Resources */,
 				049A02CA1E0F83FB00AC9EC7 /* Main.storyboard in Resources */,
 			);
@@ -295,6 +326,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E6BAEDE32804F1B63D06E85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80E4C93E5B96E894767207CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Groceries/Pods-Groceries-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB2570676C37F2E7D7936F19 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Groceries/Pods-Groceries-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		049A02BD1E0F83FB00AC9EC7 /* Sources */ = {
@@ -457,6 +536,7 @@
 		};
 		049A02EA1E0F83FB00AC9EC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 964E8918FD40E5C8EA9F1F19 /* Pods-Groceries.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YPYQ72C2TG;
@@ -470,6 +550,7 @@
 		};
 		049A02EB1E0F83FB00AC9EC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D17374462C588C22BE5A258 /* Pods-Groceries.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YPYQ72C2TG;
@@ -558,6 +639,7 @@
 				049A02EB1E0F83FB00AC9EC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		049A02EC1E0F83FB00AC9EC7 /* Build configuration list for PBXNativeTarget "GroceriesTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +648,7 @@
 				049A02EE1E0F83FB00AC9EC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		049A02EF1E0F83FB00AC9EC7 /* Build configuration list for PBXNativeTarget "GroceriesUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +657,7 @@
 				049A02F11E0F83FB00AC9EC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
